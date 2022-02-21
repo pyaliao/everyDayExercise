@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>双飞翼布局实现</title>
+  <style>
+    body {
+      text-align: center;
+      min-width: 500px;
+      margin: 0;
+    }
+    #header,
+    #footer {
+      background-color: rgba(0, 0, 0, .6);
+      color: #fff;
+    }
+    section {
+      overflow: hidden;
+    }
+    .column {
+      float: left;
+      height: 300px;
+    }
+    #center {
+      width: 100%;
+      color: #fff;
+    }
+    #center-inner {
+      margin-left: 200px;
+      margin-right: 150px;
+      background-color: #ff9900;
+      height: 100%;
+    }
+    #left {
+      margin-left: -100%;
+      width: 200px;
+      background-color: aqua;
+    }
+    #right {
+      width: 150px;
+      margin-left: -150px;
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">header</div>
+  <section>
+    <div id="center" class="column">
+      <div id="center-inner">center center centercenter center center center center</div>
+    </div>
+    <div id="left" class="column">left</div>
+    <div id="right" class="column">right</div>
+  </section>
+  <div id="footer">footer</div>
+</body>
+</html>

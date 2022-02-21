@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>经典圣杯布局</title>
+  <style>
+    body {
+      text-align: center;
+      /* 当CC的宽度小于LC宽度时，布局出现混乱，因此规定最小宽度为2x(LC fullwidth) + RC fullwidth */
+      /* 下面添加的是CC的左右padding */
+      min-width: 630px; /* 2x(LC fullwidth + cc padding) + RC fullwidth */
+    }
+    #center {
+      background-color: aqua;
+    }
+    #left {
+      background-color: #ff9900;
+    }
+    #right {
+      background-color: #3db54d;
+    }
+    #container {
+      padding-left: 200px;  /* LC fullwidth */
+      padding-right: 190px; /* RC fullwidth + CC padding */
+    }
+    #container .column {
+      float: left;
+      position: relative;
+      /* 下面属性设置等高的column */
+      /* X + padding-bottom */
+      /* padding-bottom: 20010px;   */
+      /* X */
+      /* margin-bottom: -20000px;   */
+    }
+    #center {
+      width: 100%;
+      padding: 10px 20px; /* CC padding */
+    }
+    #left {
+      width: 180px; /* LC width */
+      margin-left: -100%; /* LC padding */
+      left: -240px;  /* LC fullwidth + CC padding */
+      padding: 0 10px;
+    }
+    #right {
+      width: 130px;
+      margin-right: -150px;
+      padding: 0 10px;
+    }
+    #footer {
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">header</div>
+  <div id="container">
+    <div id="center" class="column">center</div>
+    <div id="left"   class="column">left</div>
+    <div id="right"  class="column">right</div>
+  </div>
+  <div id="footer">footer</div>
+</body>
+</html>

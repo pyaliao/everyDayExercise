@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid实现圣杯布局</title>
+  <style>
+    body {
+      display: grid;
+      text-align: center;
+    }
+    #header,
+    #footer {
+      grid-row: 1;
+      grid-column: 1/5;
+      background-color: rgba(0, 0, 0, .6);
+      color: #fff;
+    }
+    #footer {
+      grid-row: 3;
+    }
+    #left,
+    #right,
+    #center  {
+      grid-row: 2;
+      grid-column: 1/2;
+      background-color: #ff9900;
+    }
+    #right {
+      grid-column: 4/5;
+    }
+    #center {
+      grid-column: 2/4;
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">header</div>
+  <div id="left">left</div>
+  <div id="center">center</div>
+  <div id="right">right</div>
+  <div id="footer">footer</div>
+</body>
+</html>
